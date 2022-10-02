@@ -1,5 +1,5 @@
 //
-//  DateFormatter.swift
+//  DateUtility.swift
 //  Gamelog
 //
 //  Created by Kevin Jonathan on 02/10/22.
