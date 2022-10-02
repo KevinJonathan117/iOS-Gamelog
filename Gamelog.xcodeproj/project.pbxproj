@@ -18,7 +18,6 @@
 		5D40DF0028E5885800E803C4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DEFF28E5885800E803C4 /* HomeViewModel.swift */; };
 		5D40DF0228E9252A00E803C4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DF0128E9252A00E803C4 /* Game.swift */; };
 		5D40DF0628E935FD00E803C4 /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DF0528E935FD00E803C4 /* DateUtility.swift */; };
-		5DA82A0E28E9455600C21965 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A0D28E9455600C21965 /* GameDetail.swift */; };
 		5DA82A1028E9463A00C21965 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */; };
 		5DA978DC28E96524008A009E /* HTMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA978DB28E96524008A009E /* HTMLConverter.swift */; };
 /* End PBXBuildFile section */
@@ -36,7 +35,6 @@
 		5D40DEFF28E5885800E803C4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5D40DF0128E9252A00E803C4 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		5D40DF0528E935FD00E803C4 /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
-		5DA82A0D28E9455600C21965 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		5DA978DB28E96524008A009E /* HTMLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				5D40DF0128E9252A00E803C4 /* Game.swift */,
-				5DA82A0D28E9455600C21965 /* GameDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,7 +220,6 @@
 				5D40DEEE28E5871E00E803C4 /* AppDataService.swift in Sources */,
 				5D40DF0228E9252A00E803C4 /* Game.swift in Sources */,
 				5D40DF0028E5885800E803C4 /* HomeViewModel.swift in Sources */,
-				5DA82A0E28E9455600C21965 /* GameDetail.swift in Sources */,
 				5D40DEDF28E5861A00E803C4 /* GamelogApp.swift in Sources */,
 				5D40DEF828E587D600E803C4 /* DetailView.swift in Sources */,
 				5DA978DC28E96524008A009E /* HTMLConverter.swift in Sources */,
