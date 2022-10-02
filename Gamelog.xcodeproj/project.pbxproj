@@ -8,17 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		5D40DEDF28E5861A00E803C4 /* GamelogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DEDE28E5861A00E803C4 /* GamelogApp.swift */; };
-		5D40DEE128E5861A00E803C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DEE028E5861A00E803C4 /* ContentView.swift */; };
 		5D40DEE328E5861D00E803C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D40DEE228E5861D00E803C4 /* Assets.xcassets */; };
 		5D40DEE628E5861D00E803C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D40DEE528E5861D00E803C4 /* Preview Assets.xcassets */; };
+		5D40DEEE28E5871E00E803C4 /* AppDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DEED28E5871E00E803C4 /* AppDataService.swift */; };
+		5D40DEF428E587A000E803C4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DEF328E587A000E803C4 /* HomeView.swift */; };
+		5D40DEF628E587BB00E803C4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DEF528E587BB00E803C4 /* ProfileView.swift */; };
+		5D40DEF828E587D600E803C4 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DEF728E587D600E803C4 /* DetailView.swift */; };
+		5D40DEFD28E5880100E803C4 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DEFC28E5880100E803C4 /* CircleImage.swift */; };
+		5D40DF0028E5885800E803C4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DEFF28E5885800E803C4 /* HomeViewModel.swift */; };
+		5D40DF0228E9252A00E803C4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DF0128E9252A00E803C4 /* Game.swift */; };
+		5D40DF0628E935FD00E803C4 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DF0528E935FD00E803C4 /* DateFormatter.swift */; };
+		5DA82A0E28E9455600C21965 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A0D28E9455600C21965 /* GameDetail.swift */; };
+		5DA82A1028E9463A00C21965 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */; };
+		5DA82A1C28E95E5F00C21965 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A1A28E95E5F00C21965 /* AttributedText.swift */; };
+		5DA82A1D28E95E5F00C21965 /* HTML2TextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A1B28E95E5F00C21965 /* HTML2TextParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D40DEDB28E5861A00E803C4 /* Gamelog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamelog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D40DEDE28E5861A00E803C4 /* GamelogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamelogApp.swift; sourceTree = "<group>"; };
-		5D40DEE028E5861A00E803C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D40DEE228E5861D00E803C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D40DEE528E5861D00E803C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5D40DEED28E5871E00E803C4 /* AppDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataService.swift; sourceTree = "<group>"; };
+		5D40DEF328E587A000E803C4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5D40DEF528E587BB00E803C4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5D40DEF728E587D600E803C4 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5D40DEFC28E5880100E803C4 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		5D40DEFF28E5885800E803C4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5D40DF0128E9252A00E803C4 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5D40DF0528E935FD00E803C4 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		5DA82A0D28E9455600C21965 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
+		5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		5DA82A1A28E95E5F00C21965 /* AttributedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		5DA82A1B28E95E5F00C21965 /* HTML2TextParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTML2TextParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +73,12 @@
 		5D40DEDD28E5861A00E803C4 /* Gamelog */ = {
 			isa = PBXGroup;
 			children = (
+				5D40DEEC28E5870F00E803C4 /* Connector */,
+				5D40DF0428E935EC00E803C4 /* Helper */,
+				5D40DEEF28E5875D00E803C4 /* Model */,
+				5D40DEF228E5878A00E803C4 /* View */,
+				5D40DEFE28E5884600E803C4 /* ViewModel */,
 				5D40DEDE28E5861A00E803C4 /* GamelogApp.swift */,
-				5D40DEE028E5861A00E803C4 /* ContentView.swift */,
 				5D40DEE228E5861D00E803C4 /* Assets.xcassets */,
 				5D40DEE428E5861D00E803C4 /* Preview Content */,
 			);
@@ -65,6 +91,61 @@
 				5D40DEE528E5861D00E803C4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5D40DEEC28E5870F00E803C4 /* Connector */ = {
+			isa = PBXGroup;
+			children = (
+				5D40DEED28E5871E00E803C4 /* AppDataService.swift */,
+			);
+			path = Connector;
+			sourceTree = "<group>";
+		};
+		5D40DEEF28E5875D00E803C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D40DF0128E9252A00E803C4 /* Game.swift */,
+				5DA82A0D28E9455600C21965 /* GameDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D40DEF228E5878A00E803C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D40DEF928E587EB00E803C4 /* Helper */,
+				5D40DEF328E587A000E803C4 /* HomeView.swift */,
+				5D40DEF728E587D600E803C4 /* DetailView.swift */,
+				5D40DEF528E587BB00E803C4 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D40DEF928E587EB00E803C4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5DA82A1A28E95E5F00C21965 /* AttributedText.swift */,
+				5DA82A1B28E95E5F00C21965 /* HTML2TextParser.swift */,
+				5D40DEFC28E5880100E803C4 /* CircleImage.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		5D40DEFE28E5884600E803C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5D40DEFF28E5885800E803C4 /* HomeViewModel.swift */,
+				5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5D40DF0428E935EC00E803C4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5D40DF0528E935FD00E803C4 /* DateFormatter.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +164,8 @@
 			dependencies = (
 			);
 			name = Gamelog;
+			packageProductDependencies = (
+			);
 			productName = Gamelog;
 			productReference = 5D40DEDB28E5861A00E803C4 /* Gamelog.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +194,8 @@
 				Base,
 			);
 			mainGroup = 5D40DED228E5861A00E803C4;
+			packageReferences = (
+			);
 			productRefGroup = 5D40DEDC28E5861A00E803C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +222,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D40DEE128E5861A00E803C4 /* ContentView.swift in Sources */,
+				5DA82A1C28E95E5F00C21965 /* AttributedText.swift in Sources */,
+				5D40DF0628E935FD00E803C4 /* DateFormatter.swift in Sources */,
+				5D40DEEE28E5871E00E803C4 /* AppDataService.swift in Sources */,
+				5D40DF0228E9252A00E803C4 /* Game.swift in Sources */,
+				5D40DF0028E5885800E803C4 /* HomeViewModel.swift in Sources */,
+				5DA82A0E28E9455600C21965 /* GameDetail.swift in Sources */,
+				5DA82A1D28E95E5F00C21965 /* HTML2TextParser.swift in Sources */,
 				5D40DEDF28E5861A00E803C4 /* GamelogApp.swift in Sources */,
+				5D40DEF828E587D600E803C4 /* DetailView.swift in Sources */,
+				5D40DEFD28E5880100E803C4 /* CircleImage.swift in Sources */,
+				5D40DEF428E587A000E803C4 /* HomeView.swift in Sources */,
+				5DA82A1028E9463A00C21965 /* DetailViewModel.swift in Sources */,
+				5D40DEF628E587BB00E803C4 /* ProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +366,14 @@
 				DEVELOPMENT_TEAM = 3USSPQR589;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Gamelog;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +381,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = am.dx.kevinjonathan.Gamelog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,11 +401,14 @@
 				DEVELOPMENT_TEAM = 3USSPQR589;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Gamelog;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +416,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = am.dx.kevinjonathan.Gamelog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
