@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 enum LoadingState {
     case loading
@@ -17,18 +18,29 @@ enum LoadingState {
 class HomeViewModel: ObservableObject {
     @Published var games = [Game]()
     @Published var state: LoadingState = .loading
-    @Published var searchQuery: String = "" {
-        didSet {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                self.getGames()
-            })
-        }
-    }
+    @Published var searchQuery: String = "" 
     
     let dataService: DataService
+    private var cancellables = Set<AnyCancellable>()
     
     init(dataService: DataService = AppDataService()) {
         self.dataService = dataService
+        initSearchObserver()
+    }
+    
+    deinit {
+        cancellables.removeAll()
+    }
+    
+    func initSearchObserver() {
+        $searchQuery
+            .removeDuplicates()
+            .debounce(for: 0.5, scheduler: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] value in
+                guard let self = self else { return }
+                self.getGames()
+            })
+            .store(in: &cancellables)
     }
     
     func getGames() {

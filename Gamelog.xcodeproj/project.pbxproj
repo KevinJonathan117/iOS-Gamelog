@@ -20,8 +20,7 @@
 		5D40DF0628E935FD00E803C4 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D40DF0528E935FD00E803C4 /* DateFormatter.swift */; };
 		5DA82A0E28E9455600C21965 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A0D28E9455600C21965 /* GameDetail.swift */; };
 		5DA82A1028E9463A00C21965 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */; };
-		5DA82A1C28E95E5F00C21965 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A1A28E95E5F00C21965 /* AttributedText.swift */; };
-		5DA82A1D28E95E5F00C21965 /* HTML2TextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A1B28E95E5F00C21965 /* HTML2TextParser.swift */; };
+		5DA978DC28E96524008A009E /* HTMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA978DB28E96524008A009E /* HTMLConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +38,7 @@
 		5D40DF0528E935FD00E803C4 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		5DA82A0D28E9455600C21965 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		5DA82A1A28E95E5F00C21965 /* AttributedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
-		5DA82A1B28E95E5F00C21965 /* HTML2TextParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTML2TextParser.swift; sourceTree = "<group>"; };
+		5DA978DB28E96524008A009E /* HTMLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +122,6 @@
 		5D40DEF928E587EB00E803C4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				5DA82A1A28E95E5F00C21965 /* AttributedText.swift */,
-				5DA82A1B28E95E5F00C21965 /* HTML2TextParser.swift */,
 				5D40DEFC28E5880100E803C4 /* CircleImage.swift */,
 			);
 			path = Helper;
@@ -144,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				5D40DF0528E935FD00E803C4 /* DateFormatter.swift */,
+				5DA978DB28E96524008A009E /* HTMLConverter.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -222,15 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DA82A1C28E95E5F00C21965 /* AttributedText.swift in Sources */,
 				5D40DF0628E935FD00E803C4 /* DateFormatter.swift in Sources */,
 				5D40DEEE28E5871E00E803C4 /* AppDataService.swift in Sources */,
 				5D40DF0228E9252A00E803C4 /* Game.swift in Sources */,
 				5D40DF0028E5885800E803C4 /* HomeViewModel.swift in Sources */,
 				5DA82A0E28E9455600C21965 /* GameDetail.swift in Sources */,
-				5DA82A1D28E95E5F00C21965 /* HTML2TextParser.swift in Sources */,
 				5D40DEDF28E5861A00E803C4 /* GamelogApp.swift in Sources */,
 				5D40DEF828E587D600E803C4 /* DetailView.swift in Sources */,
+				5DA978DC28E96524008A009E /* HTMLConverter.swift in Sources */,
 				5D40DEFD28E5880100E803C4 /* CircleImage.swift in Sources */,
 				5D40DEF428E587A000E803C4 /* HomeView.swift in Sources */,
 				5DA82A1028E9463A00C21965 /* DetailViewModel.swift in Sources */,

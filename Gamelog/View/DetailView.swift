@@ -42,26 +42,6 @@ struct DetailView: View {
 
 private extension DetailView {
     @ViewBuilder func Header() -> some View {
-//        AsyncImage(
-//            url: URL(string: viewModel.game?.backgroundImage ?? ""),
-//            content: { image in
-//                image.resizable()
-//                    .aspectRatio(contentMode: .fill)
-//                    .frame(width: 120, height: 120)
-//                    .cornerRadius(8)
-//                    .shadow(radius: 7)
-//            },
-//            placeholder: {
-//                Spacer()
-//
-//                ZStack {
-//                    ProgressView()
-//                }.frame(width: 120, height: 120)
-//
-//                Spacer()
-//            }
-//        )
-        
         AsyncImage(
             url: URL(string: viewModel.game?.backgroundImage ?? ""),
             content: { image in
@@ -96,19 +76,23 @@ private extension DetailView {
                 }
             }
             
-            Divider()
-            
             VStack(alignment: .leading, spacing: 8) {
                 Text("Released on: \(viewModel.game?.released ?? "")")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .bold()
                 
                 Text(viewModel.game?.website ?? "")
+                    .font(.subheadline)
                     .foregroundColor(.blue)
                     .onTapGesture {
                         guard let url = URL(string: viewModel.game?.website ?? "") else { return }
                         UIApplication.shared.open(url)
                     }
                 
-                AttributedText(viewModel.game?.description ?? "")
+                Divider()
+                
+                Text(viewModel.game?.description?.convertHtmlToString ?? "")
             }
         }
         .padding([.top, .leading, .trailing])

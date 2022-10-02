@@ -17,6 +17,7 @@ class AppDataService: DataService {
     let key = "05193e403aa040e8b460c5785d3e822a"
     
     func getGames(query: String, completion: @escaping ([Game], Bool) -> Void) {
+        let query = query.replacingOccurrences(of: " ", with: "+")
         let url = URL(string: "\(baseUrl)/games?key=\(key)&search=\(query)")
         guard let url = url else {
             completion([], true)
