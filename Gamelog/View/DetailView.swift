@@ -15,16 +15,15 @@ struct DetailView: View {
     }
     
     var body: some View {
-        ScrollView {
+        VStack {
             Group {
                 switch viewModel.state {
                 case .loading:
                     ProgressView()
-                        .frame(alignment: .center)
                 case .fail, .empty:
                     Text("Loading Failed")
                 case .loaded:
-                    VStack {
+                    ScrollView {
                         Header()
                         
                         Content()
