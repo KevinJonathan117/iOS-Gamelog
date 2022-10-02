@@ -77,7 +77,7 @@ private extension DetailView {
             }
             
             VStack(alignment: .leading, spacing: 8) {
-                Text("Released on: \(viewModel.game?.released ?? "")")
+                Text("Released on: \(DateUtility.convertToHumanReadableDate(viewModel.game?.released ?? ""))")
                     .font(.caption)
                     .foregroundColor(.gray)
                     .bold()

@@ -83,7 +83,7 @@ private extension HomeView {
                         Text(game.name ?? "")
                             .multilineTextAlignment(.leading)
                         
-                        Text(game.released ?? "")
+                        Text(DateUtility.convertToHumanReadableDate(game.released ?? ""))
                             .font(.caption)
                             .foregroundColor(.gray)
                     }
