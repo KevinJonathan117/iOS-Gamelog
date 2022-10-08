@@ -5,8 +5,6 @@
 //  Created by Kevin Jonathan on 02/10/22.
 //
 
-import Foundation
-
 struct GameList: Codable {
     let next: String?
     let previous: String?

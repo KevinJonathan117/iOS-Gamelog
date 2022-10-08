@@ -13,8 +13,20 @@ protocol DataService {
 }
 
 class AppDataService: DataService {
-    let baseUrl = "https://api.rawg.io/api"
-    let key = "05193e403aa040e8b460c5785d3e822a"
+    private let baseUrl = "https://api.rawg.io/api"
+    private var key: String {
+        get {
+            guard let filePath = Bundle.main.path(forResource: "RAWG-Info", ofType: "plist") else {
+                fatalError("Couldn't find file 'RAWG-Info.plist'.")
+            }
+            
+            let plist = NSDictionary(contentsOfFile: filePath)
+            guard let value = plist?.object(forKey: "API_KEY") as? String else {
+                fatalError("Couldn't find key 'API_KEY' in 'RAWG-Info.plist'.")
+            }
+            return value
+        }
+    }
     
     func getGames(query: String, completion: @escaping ([Game], Bool) -> Void) {
         let query = query.replacingOccurrences(of: " ", with: "+")
@@ -27,7 +39,7 @@ class AppDataService: DataService {
         request.httpMethod = "GET"
 
         let session = URLSession.shared
-        let task = session.dataTask(with: request) { (data, response, error) in
+        let task = session.dataTask(with: request) { (data, _, error) in
             if let error = error {
                 print(error)
             } else if let data = data {
@@ -38,8 +50,8 @@ class AppDataService: DataService {
                     DispatchQueue.main.async {
                         completion(games.results ?? [], false)
                     }
-                } catch(let e) {
-                    print("Failed to Decode JSON \(e)")
+                } catch(let errorMessage) {
+                    print("Failed to Decode JSON \(errorMessage)")
                     completion([], true)
                 }
                 
@@ -61,7 +73,7 @@ class AppDataService: DataService {
         request.httpMethod = "GET"
 
         let session = URLSession.shared
-        let task = session.dataTask(with: request) { (data, response, error) in
+        let task = session.dataTask(with: request) { (data, _, error) in
             if let error = error {
                 print(error)
             } else if let data = data {
@@ -72,8 +84,8 @@ class AppDataService: DataService {
                     DispatchQueue.main.async {
                         completion(game, false)
                     }
-                } catch(let e) {
-                    print("Failed to Decode JSON \(e)")
+                } catch(let errorMessage) {
+                    print("Failed to Decode JSON \(errorMessage)")
                     completion(nil, true)
                 }
                 
