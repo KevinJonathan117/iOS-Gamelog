@@ -56,9 +56,6 @@ class DetailViewModel: ObservableObject {
         if isSuccess {
             getFavoriteStatus()
             showPopup = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                self.showPopup = false
-            }
         }
     }
 }
