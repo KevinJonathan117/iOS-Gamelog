@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @StateObject var viewModel: ProfileViewModel
+    
+    init(viewModel: ProfileViewModel = .init()) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         ScrollView {
             Group {
@@ -25,16 +31,25 @@ struct ProfileView: View {
         }
         .navigationTitle("My Profile")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            Button {
+                viewModel.isSheetPresented.toggle()
+            } label: {
+                Text("Edit")
+            }.sheet(isPresented: $viewModel.isSheetPresented) {
+                BottomsheetContent()
+            }
+        }
     }
 }
 
 extension ProfileView {
     @ViewBuilder func Header() -> some View {
         Group {
-            Text("Kevin Jonathan")
+            Text(viewModel.name)
                 .font(.title)
             
-            Text("Associate Mobile Development Engineer (iOS) at Blibli.com")
+            Text(viewModel.job)
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
@@ -42,11 +57,71 @@ extension ProfileView {
     
     @ViewBuilder func About() -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("About Kevin")
+            Text("About Me")
                 .font(.title2)
                 .bold()
             
-            Text("I am Kevin Jonathan, an ambitious mobile development engineer proficient in iOS app development and Flutter. I have 4+ years of experience in mobile application engineering and 10 months of internship in Apple Developer Academy @UC.\n\nI am currently working as an iOS Developer at Blibli.com. Kindly connect with me!")
+            Text(viewModel.aboutMe)
+        }
+    }
+    
+    @ViewBuilder func BottomsheetContent() -> some View {
+        NavigationView {
+            VStack {
+                Form {
+                    Section(header: Text("My Basic Info")) {
+                        TextField(
+                            "Name",
+                            text: $viewModel.nameTextfield
+                        )
+                        .disableAutocorrection(true)
+                        
+                        TextField(
+                            "Job",
+                            text: $viewModel.jobTextfield
+                        )
+                        .disableAutocorrection(true)
+                    }
+                    
+                    Section(header: Text("About Me")) {
+                        if #available(iOS 16.0, *) {
+                            TextField(
+                                "About Me",
+                                text: $viewModel.aboutMeTextfield,
+                                axis: .vertical
+                            )
+                            .disableAutocorrection(true)
+                            .lineLimit(5)
+                        } else {
+                            TextField(
+                                "About Me",
+                                text: $viewModel.aboutMeTextfield
+                            )
+                            .disableAutocorrection(true)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Edit Profile")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        viewModel.isSheetPresented.toggle()
+                    } label: {
+                        Text("Cancel")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        viewModel.isSheetPresented.toggle()
+                        viewModel.saveProfileEdit()
+                    } label: {
+                        Text("Save")
+                            .bold()
+                    }
+                }
+            }
         }
     }
 }
