@@ -40,7 +40,10 @@ class ProfileViewModel: ObservableObject {
         LocalStorage.setValue(key: "name", value: nameTextfield)
         LocalStorage.setValue(key: "job", value: jobTextfield)
         LocalStorage.setValue(key: "aboutMe", value: aboutMeTextfield)
-        
+    }
+    
+    func saveProfileEdit() {
+        setProfileInfo()
         getProfileInfo()
     }
 }

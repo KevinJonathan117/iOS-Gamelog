@@ -115,7 +115,7 @@ extension ProfileView {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         viewModel.isSheetPresented.toggle()
-                        viewModel.setProfileInfo()
+                        viewModel.saveProfileEdit()
                     } label: {
                         Text("Save")
                             .bold()

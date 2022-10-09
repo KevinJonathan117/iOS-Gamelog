@@ -10,8 +10,13 @@ import Foundation
 protocol DataService {
     func getGames(query: String, completion: @escaping ([Game], Bool) -> Void)
     func getGameDetail(id: Int, completion: @escaping (Game?, Bool) -> Void)
+    func getFavoriteGameList() -> [GameItem]
+    func getFavoriteStatus(id: Int) -> Bool
+    func addFavorite(game: Game) -> Bool
+    func deleteFavorite(game: Game) -> Bool
 }
 
+//MARK: API Requests
 class AppDataService: DataService {
     private let baseUrl = "https://api.rawg.io/api"
     private var key: String {
@@ -95,5 +100,69 @@ class AppDataService: DataService {
             }
         }
         task.resume()
+    }
+}
+
+//MARK: CoreData CRUD
+extension AppDataService {
+    func getFavoriteGameList() -> [GameItem] {
+        let context = PersistenceController.shared.container.viewContext
+        do {
+            let gameList = try context.fetch(GameItem.fetchRequest())
+            return gameList
+        } catch {
+            print("Cannot get all items")
+            return []
+        }
+    }
+    
+    func getFavoriteStatus(id: Int) -> Bool {
+        let context = PersistenceController.shared.container.viewContext
+        do {
+            let gameData = try context.fetch(GameItem.fetchRequest())
+            let isFavorite = gameData.contains(where: { $0.id == id })
+            return isFavorite
+        } catch {
+            print("Cannot get all items before getting status")
+            return false
+        }
+    }
+    
+    func addFavorite(game: Game) -> Bool {
+        let context = PersistenceController.shared.container.viewContext
+        let newItem = GameItem(context: context)
+        newItem.id = Int64(game.id ?? 0)
+        newItem.name = game.name
+        newItem.released = game.released
+        newItem.backgroundImage = game.backgroundImage
+        newItem.rating = game.rating ?? 0
+        
+        do {
+            try context.save()
+            return true
+        } catch {
+            print("Cannot add item")
+            return false
+        }
+    }
+    
+    func deleteFavorite(game: Game) -> Bool {
+        let context = PersistenceController.shared.container.viewContext
+        let gameData: GameItem? = getFavoriteGameList().filter({ $0.id == game.id ?? 0 }).first
+        
+        if let gameData = gameData {
+            context.delete(gameData)
+            
+            do {
+                try context.save()
+                return true
+            } catch {
+                print("Cannot delete item")
+                return false
+            }
+        }
+        
+        print("Item doesn't exist")
+        return false
     }
 }

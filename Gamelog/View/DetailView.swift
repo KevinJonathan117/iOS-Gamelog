@@ -34,7 +34,20 @@ struct DetailView: View {
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 viewModel.getGameDetail()
+                viewModel.getFavoriteStatus()
+            }.toolbar {
+                Button {
+                    viewModel.toggleFavoriteStatus()
+                } label: {
+                    Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
+                }
             }
+        }.alert(isPresented: $viewModel.showPopup) {
+            Alert(
+                title: Text(viewModel.isFavorite ? "Added to Favorite" : "Removed from Favorite"),
+                message: Text("You can always check your favorited games at Favorite tab"),
+                dismissButton: .default(Text("OK"))
+            )
         }
     }
 }

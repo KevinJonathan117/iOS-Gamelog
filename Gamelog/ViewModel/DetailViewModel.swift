@@ -10,6 +10,8 @@ import Foundation
 class DetailViewModel: ObservableObject {
     @Published var game: Game? = nil
     @Published var state: LoadingState = .loading
+    @Published var isFavorite: Bool = false
+    @Published var showPopup: Bool = false
     
     let id: Int
     let dataService: DataService
@@ -35,5 +37,28 @@ class DetailViewModel: ObservableObject {
                 }
             }
         })
+    }
+    
+    func getFavoriteStatus() {
+        isFavorite = dataService.getFavoriteStatus(id: id)
+    }
+    
+    func toggleFavoriteStatus() {
+        guard let game = game else { return }
+        var isSuccess: Bool = false
+        
+        if isFavorite {
+            isSuccess = dataService.deleteFavorite(game: game)
+        } else {
+            isSuccess = dataService.addFavorite(game: game)
+        }
+        
+        if isSuccess {
+            getFavoriteStatus()
+            showPopup = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.showPopup = false
+            }
+        }
     }
 }
