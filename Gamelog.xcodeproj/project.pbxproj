@@ -21,6 +21,8 @@
 		5DA82A1028E9463A00C21965 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */; };
 		5DA978DC28E96524008A009E /* HTMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA978DB28E96524008A009E /* HTMLConverter.swift */; };
 		5DA97C3A28F1DFA4008A009E /* RAWG-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DA97C3928F1DFA4008A009E /* RAWG-Info.plist */; };
+		5DA97C3C28F2BA67008A009E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA97C3B28F2BA67008A009E /* ProfileViewModel.swift */; };
+		5DA97C3E28F2C0C0008A009E /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA97C3D28F2C0C0008A009E /* LocalStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		5DA978DB28E96524008A009E /* HTMLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLConverter.swift; sourceTree = "<group>"; };
 		5DA97C3928F1DFA4008A009E /* RAWG-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RAWG-Info.plist"; sourceTree = "<group>"; };
+		5DA97C3B28F2BA67008A009E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		5DA97C3D28F2C0C0008A009E /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				5D40DEED28E5871E00E803C4 /* AppDataService.swift */,
+				5DA97C3D28F2C0C0008A009E /* LocalStorage.swift */,
 			);
 			path = Connector;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			children = (
 				5D40DEFF28E5885800E803C4 /* HomeViewModel.swift */,
 				5DA82A0F28E9463A00C21965 /* DetailViewModel.swift */,
+				5DA97C3B28F2BA67008A009E /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -226,9 +232,11 @@
 				5D40DF0028E5885800E803C4 /* HomeViewModel.swift in Sources */,
 				5D40DEDF28E5861A00E803C4 /* GamelogApp.swift in Sources */,
 				5D40DEF828E587D600E803C4 /* DetailView.swift in Sources */,
+				5DA97C3C28F2BA67008A009E /* ProfileViewModel.swift in Sources */,
 				5DA978DC28E96524008A009E /* HTMLConverter.swift in Sources */,
 				5D40DEFD28E5880100E803C4 /* CircleImage.swift in Sources */,
 				5D40DEF428E587A000E803C4 /* HomeView.swift in Sources */,
+				5DA97C3E28F2C0C0008A009E /* LocalStorage.swift in Sources */,
 				5DA82A1028E9463A00C21965 /* DetailViewModel.swift in Sources */,
 				5D40DEF628E587BB00E803C4 /* ProfileView.swift in Sources */,
 			);
